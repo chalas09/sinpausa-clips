@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sinpausa clips</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700&display=swap">
+<style>
+/* Layout: one readable column, brand header, anchored sections for Terms (#terms) and Privacy (#privacy) */
+:root{
+  --bg:#f6f5f1; --surface:#ffffff; --fg:#17161a; --muted:#5d5a63; --line:#e3e0d8; --accent:#c99700; --chip:#17161a; --chipfg:#ffcf33;
+  --display:'Anton', Impact, 'Arial Narrow', sans-serif; --body:'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f0f12; --surface:#17171c; --fg:#ececf1; --muted:#9b98a5; --line:#2a2a31; --accent:#ffcf33; --chip:#ffcf33; --chipfg:#111114; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f0f12; --surface:#17171c; --fg:#ececf1; --muted:#9b98a5; --line:#2a2a31; --accent:#ffcf33; --chip:#ffcf33; --chipfg:#111114; color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 var(--body)}
+.wrap{max-width:46rem;margin:0 auto;padding-block:40px 64px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:36px}
+header{display:flex;flex-direction:column;gap:12px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:44px;height:44px;border-radius:50%;background:var(--chip);color:var(--chipfg);display:grid;place-items:center;font:20px var(--display)}
+h1{font:clamp(34px,7vw,52px)/1 var(--display);letter-spacing:.01em;margin:0;text-wrap:balance}
+.lead{color:var(--muted);margin:0;max-width:60ch}
+nav{display:flex;gap:10px;flex-wrap:wrap}
+nav a{color:var(--fg);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:600;font-size:14px}
+nav a:hover,nav a:focus-visible{border-color:var(--accent);outline:none}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px max(18px,3vw);display:flex;flex-direction:column;gap:10px;scroll-margin-top:16px}
+h2{font:28px/1.1 var(--display);letter-spacing:.02em;margin:0;text-wrap:balance}
+h3{font-size:16px;margin:12px 0 0}
+p,li{max-width:65ch;margin:0}
+ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.updated{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+footer{color:var(--muted);font-size:14px}
+code{font-size:14px;background:var(--bg);padding:1px 6px;border-radius:5px}
+</style>
+</head><body>
+
+<div class="wrap">
+  <header>
+    <div class="brand"><div class="mark">S</div><span class="updated">sinpausa clips · @sinpausa.clips</span></div>
+    <h1>sinpausa clips</h1>
+    <p class="lead">sinpausa clips is a personal desktop tool. It finds highlights in public live streams, edits them into vertical clips with captions and a credit to the original streamer, and publishes them to the operator's own TikTok account, @sinpausa.clips.</p>
+    <nav><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a></nav>
+  </header>
+
+  <section id="terms">
+    <span class="updated">Last updated: 18 November 2026</span>
+    <h2>Terms of Service</h2>
+    <p>These terms apply to the sinpausa clips desktop application ("the app"). By connecting a TikTok account to the app you accept them.</p>
+    <h3>1. What the app does</h3>
+    <p>The app runs on the operator's own computer. It creates short video clips from live streams and, when a TikTok account is connected, uploads those clips to that account through TikTok's official Content Posting API.</p>
+    <h3>2. Who may use it</h3>
+    <p>The app is a private tool operated by the owner of @sinpausa.clips. It is not offered as a public service and no accounts are created for other people.</p>
+    <h3>3. Content and credit</h3>
+    <ul>
+      <li>Every clip shows the original streamer's channel name on screen and in the post description.</li>
+      <li>Clips are only made from streams whose creators allow clipping. If a creator asks for a clip to be removed, it will be deleted from TikTok and from the app.</li>
+      <li>All posted content must follow TikTok's Community Guidelines and Terms of Service.</li>
+    </ul>
+    <h3>4. TikTok connection</h3>
+    <p>The connection uses TikTok Login Kit. It can be removed at any time from the app ("Disconnect") or from TikTok: Settings and privacy, Security and permissions, Apps and services.</p>
+    <h3>5. No warranty</h3>
+    <p>The app is provided as is, without warranties. The operator is not responsible for interruptions of TikTok's services.</p>
+    <h3>6. Changes</h3>
+    <p>These terms may be updated. The date at the top of this section shows the latest version.</p>
+  </section>
+
+  <section id="privacy">
+    <span class="updated">Last updated: 18 November 2026</span>
+    <h2>Privacy Policy</h2>
+    <h3>Data the app receives from TikTok</h3>
+    <ul>
+      <li>Basic profile information (<code>user.info.basic</code>): open ID, display name and avatar, used to show which account is connected.</li>
+      <li>Access and refresh tokens, used only to publish clips to the connected account (<code>video.publish</code>, <code>video.upload</code>).</li>
+    </ul>
+    <h3>Where it is stored</h3>
+    <p>Tokens and profile data are stored only on the operator's computer. They are not sent to any server other than TikTok's own API, and they are never sold, shared or used for advertising.</p>
+    <h3>Stream content</h3>
+    <p>Clips are made from public live streams. Audio is transcribed on the local computer to create captions. No personal data of stream viewers is collected; chat messages are only counted in memory to detect highlights and are not stored.</p>
+    <h3>Retention and deletion</h3>
+    <p>Disconnecting TikTok in the app deletes the stored tokens immediately. Revoking access in TikTok's settings also stops all access.</p>
+    <h3>Contact</h3>
+    <p>For questions or removal requests, send a direct message to <strong>@sinpausa.clips</strong> on TikTok.</p>
+  </section>
+
+  <footer>sinpausa clips is an independent tool and is not affiliated with TikTok, Twitch or Kick.</footer>
+</div>
+</body></html>
